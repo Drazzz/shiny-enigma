@@ -396,3 +396,14 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+.idea/
+
+#Terraform
+.terraform.lock.hcl
+tfplan*
+*.tfstate
+terraform-provider-*.exe
+.terraform
+
+#http-client
+*.private.env.json
