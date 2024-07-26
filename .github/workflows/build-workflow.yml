@@ -20,6 +20,12 @@ jobs:
       - name: 👨‍💻 Check-out code
         uses: actions/checkout@v4
 
+      - name: Install azd
+        uses: Azure/setup-azd@v1.0.0
+
+      - name: Install .NET Aspire workload
+        run: dotnet workload install aspire
+
       - name: 👨‍🔧 Setup .NET Core SDK
         uses: actions/setup-dotnet@v4
         with:
