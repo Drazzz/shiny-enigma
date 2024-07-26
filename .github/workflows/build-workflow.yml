@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - develop
       - feature/*
   pull_request:
     branches:
@@ -43,7 +42,7 @@ jobs:
       - name: 🫣 Testing code
         run: |
           echo "## ❔ Test results" >> $GITHUB_STEP_SUMMARY
-          dotnet test --configuration Release -v minimal --no-build --logger GitHubActions '/p:CollectCoverage=true;CoverletOutputFormat="json,lcov,cobertura";MergeWith=${{github.workspace}}/coverage.json;CoverletOutput=${{github.workspace}}/coverage' src/*.UnitTests*.csproj -- RunConfiguration.CollectSourceInformation=true
+          dotnet test --configuration Release -v minimal --no-build --logger GitHubActions '/p:CollectCoverage=true;CoverletOutputFormat="json,lcov,cobertura";MergeWith=${{github.workspace}}/coverage.json;CoverletOutput=${{github.workspace}}/coverage' src -- RunConfiguration.CollectSourceInformation=true
 
       - name: 📝 Code Coverage report
         run: |
