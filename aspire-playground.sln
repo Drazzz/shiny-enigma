@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.Playground.AppHost",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.Playground.ServiceDefaults", "src\Aspire.Playground.ServiceDefaults\Aspire.Playground.ServiceDefaults.csproj", "{7AFFC2F1-004A-4F7B-9588-54489A7A003A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{97FF097C-CA86-41E1-8AEA-10EE3CEF964E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,7 @@ Global
 		{7AFFC2F1-004A-4F7B-9588-54489A7A003A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AFFC2F1-004A-4F7B-9588-54489A7A003A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AFFC2F1-004A-4F7B-9588-54489A7A003A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
