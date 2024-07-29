@@ -43,7 +43,7 @@ jobs:
         
       - name: 🫣 Testing code
         run: |
-          dotnet test --configuration Release -v minimal --no-build --logger trx --collect:"XPlat Code Coverage"
+          dotnet test --configuration Release -v minimal --logger trx --collect:"XPlat Code Coverage"
 
       - name: 📝 Combine Coverage Reports # This is because one report is produced per project, and we want one result for all of them.
         uses: danielpalme/ReportGenerator-GitHub-Action@5.3.8
