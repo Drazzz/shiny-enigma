@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.Playground.ServiceDe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{97FF097C-CA86-41E1-8AEA-10EE3CEF964E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.Playground.AppHost.UnitTests", "src\Aspire.Playground.AppHost.UnitTests\Aspire.Playground.AppHost.UnitTests.csproj", "{64DE7437-DFC1-4846-A912-B798E9FFE4CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{7AFFC2F1-004A-4F7B-9588-54489A7A003A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AFFC2F1-004A-4F7B-9588-54489A7A003A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AFFC2F1-004A-4F7B-9588-54489A7A003A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64DE7437-DFC1-4846-A912-B798E9FFE4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64DE7437-DFC1-4846-A912-B798E9FFE4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64DE7437-DFC1-4846-A912-B798E9FFE4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64DE7437-DFC1-4846-A912-B798E9FFE4CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
