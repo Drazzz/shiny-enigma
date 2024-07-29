@@ -43,7 +43,7 @@ jobs:
         
       - name: 🫣 Testing code
         run: |
-          run: dotnet test --configuration Release --verbosity normal --logger trx --collect:"XPlat Code Coverage"
+          dotnet test --configuration Release -v minimal --no-build --logger trx --collect:"XPlat Code Coverage"
 
       - name: 📝 Combine Coverage Reports # This is because one report is produced per project, and we want one result for all of them.
         uses: danielpalme/ReportGenerator-GitHub-Action@5.3.8
@@ -93,18 +93,4 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v2.16.1
         if: always()
         with:
-          # NOTE: using trx_files instead of files due to https://github.com/EnricoMi/publish-unit-test-result-action/issues/424
           trx_files: "${{ github.workspace }}/**/*.trx"
-
-#      - name: 🫣 Testing code
-#        run: |
-#          echo "## ❔ Test results" >> $GITHUB_STEP_SUMMARY
-#          dotnet test --configuration Release -v minimal --no-build --logger GitHubActions '/p:CollectCoverage=true;CoverletOutputFormat="json,lcov,cobertura";MergeWith=${{github.workspace}}/coverage.json;CoverletOutput=${{github.workspace}}/coverage' src/Aspire.Playground.AppHost.UnitTests -- RunConfiguration.CollectSourceInformation=true
-#
-#      - name: 📝 Code Coverage report
-#        run: |
-#          dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.1.23
-#          reportgenerator -reports:${{github.workspace}}/coverage.cobertura.xml -targetdir:${{github.workspace}}/report -reporttypes:MarkdownSummaryGithub "-filefilters:-*.g.cs;-*.gen.cs" -verbosity:Warning
-#          sed -i 's/# Summary/## 📝 Code Coverage/g' ${{github.workspace}}/report/SummaryGithub.md
-#          sed -i 's/## Coverage/### Code Coverage details/g' ${{github.workspace}}/report/SummaryGithub.md
-#          cat ${{github.workspace}}/report/*.md >> $GITHUB_STEP_SUMMARY
